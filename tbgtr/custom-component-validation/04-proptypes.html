@@ -16,6 +16,12 @@
       const rootElement = document.getElementById('root')    
     
       class SayHello extends React.Component{
+    /*  It is also possible to declare PropTypes as in
+        SayHello.propTypes = {
+          firstName: PropTypes.string.isRequired,
+          lastName: PropTypes.string.isRequired,
+        }
+        but using an static method inside a class shows better manners  */
         static propTypes = {
           firstName: PropTypes.string.isRequired,
           lastName: PropTypes.string.isRequired,
@@ -35,5 +41,5 @@
       ReactDOM.render(element, rootElement)
     </script>
   </body>
-  
+
 </html>
