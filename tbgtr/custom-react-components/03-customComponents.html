@@ -14,8 +14,9 @@
     <script type='text/babel'>
       const rootElement = document.getElementById('root')
 
-      /* This version uses a Message function which receives 'props' and returns a formatted props.children 
-      it allows us to use <Message> similarly to HTML, being able to nest components in a more proper manner*/
+  /*  This version uses a Message function which receives 'props' and returns
+      a formatted props.children it allows us to use <Message> similarly
+      to HTML, being able to nest components in a more proper manner  */
       const Message = (props) => <div><li>{props.children}</li></div>
       const element = (
         <div className= 'container'>
