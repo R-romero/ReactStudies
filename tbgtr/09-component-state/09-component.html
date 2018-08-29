@@ -14,6 +14,10 @@
   
   <script type='text/babel'>
     class StopWatch extends React.Component{
+
+      componentWillUnmount(){
+        clearInterval(this.timer)
+      }
       state = {lapse:0, running:false}
 
       handleRunClick = () => {
@@ -25,6 +29,9 @@
               this.timer = setInterval(() =>{
                 this.setState({
                   lapse: Date.now() - startTime,
+                },
+                () => {
+                  console.log(this.state.lapse)
                 })
               })    
           }
@@ -68,7 +75,32 @@
       }
     }
 
-    const element = <StopWatch/>
+    class App extends React.Component {
+        state = {showStopWatch: true}
+      render() {
+        const {showStopWatch} = this.state
+        return (
+          <div>
+            <label>
+              Show Stop Watch{' '}
+              <input
+              type="checkbox"
+              checked={showStopWatch}
+              onChange={() =>
+                this.setState(s => ({
+                  showStopWatch: !s.showStopWatch,
+              }))}
+              />
+            </label>
+            <hr />
+            {showStopWatch ? <StopWatch /> : null}
+          </div>
+        )
+      }
+    }
+
+    const element = <App/>
+
     ReactDOM.render(
       element,
       document.getElementById('root')
