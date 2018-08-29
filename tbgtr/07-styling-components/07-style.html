@@ -5,11 +5,11 @@
     <meta charset='UTF-8'/>
   </head>
   <body>
-      <div id="root"></div>
-      <script src="https://unpkg.com/react@16.3.1/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js"></script>
-      <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
-      <script src="https://unpkg.com/prop-types@15.6.1/prop-types.js"></script>
+      <div id='root'></div>
+      <script src='https://unpkg.com/react@16.3.1/umd/react.development.js'></script>
+      <script src='https://unpkg.com/react-dom@16.3.1/umd/react-dom.development.js'></script>
+      <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+      <script src='https://unpkg.com/prop-types@15.6.1/prop-types.js'></script>
 
       <style>
         .box {
@@ -29,7 +29,7 @@
         }
       </style>
 
-      <script type="text/babel">
+      <script type='text/babel'>
         function Box({style, size, ...rest}){
           const sizeClassName = size ? `box--${size}` : ''
           return (
