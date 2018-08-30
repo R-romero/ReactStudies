@@ -14,11 +14,11 @@
   
   <script type='text/babel'>
     class StopWatch extends React.Component{
+      state = {lapse:0, running:false}
 
       componentWillUnmount(){
         clearInterval(this.timer)
       }
-      state = {lapse:0, running:false}
 
       handleRunClick = () => {
         this.setState(state => {
@@ -76,7 +76,7 @@
     }
 
     class App extends React.Component {
-        state = {showStopWatch: true}
+      state = {showStopWatch: true}
       render() {
         const {showStopWatch} = this.state
         return (
