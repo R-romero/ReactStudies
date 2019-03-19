@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import pic from './resources/instructor-photo.png';
 import {
   Wrap,
   Container,
@@ -13,15 +14,15 @@ class About extends Component {
   render() {
     return (
       <Wrap>
-        <Container>
+        <Container basis={'40%'}>
           <Title>About</Title>
-          <Link>
-            <Pic href='#'></Pic>
+          <Link href= 'https://kentcdodds.com/' target= '_blank'>  
+            <Pic src={pic}></Pic>
             <Name>Kent C. Dodds</Name>
           </Link>
         </Container>
 
-        <Container>
+        <Container >
           <Description>
             React got that name for a reason. It’s a component-based JavaScript
             library that renders smartly and can seriously simplify your work.
@@ -35,3 +36,5 @@ class About extends Component {
     );
   }
 }
+
+export default About;
