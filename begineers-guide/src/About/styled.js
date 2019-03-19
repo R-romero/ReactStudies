@@ -4,6 +4,7 @@ import { device } from '../queries'
 export const Wrap = styled.div `
   background-color: #E5F4E3;
   height: 30vh;
+  min-height:237px;
   display: flex;
 `
 
@@ -14,12 +15,12 @@ export const Container = styled.div `
 
 export const Title = styled.div `
   font-family: 'Cambria';
-  padding-left: 5%;
+  padding-left: 5px;
   font-size: 2em;
   font-style: bold;
 
   @media ${device.tablet} {
-    padding-left: 5%;
+    padding-left: 15px;
     font-size: 2.5em;
   }
 
