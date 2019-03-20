@@ -35,15 +35,23 @@ export const Header = styled.div`
   display:flex;
   background-color: #1c2128;
   border: 2px solid #12151a;
+
+
 `
 
 export const Nav = styled.div`
   box-sizing: border-box;
   width: 100%;
-  display: grid;
   text-align: center;
   list-style: none;
-  grid-template-columns: repeat(2, 2fr);
+
+  
+  .carousel__slide {
+    display:none;
+    grid-template-columns: repeat(2, 1fr);
+  }.carousel__slide--active {
+    display:grid;
+  }
 
   /* @media ${device.laptop}{
     grid-template-columns: repeat(4, 1fr);
@@ -72,6 +80,7 @@ export const Scroll = styled.div `
 
 export const Desc = styled.div `
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
 `
