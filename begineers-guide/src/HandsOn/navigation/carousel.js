@@ -69,6 +69,7 @@ class Carousel extends Component {
               index={index}
               activeIndex={this.state.activeIndex}
               slide={slide}
+              handleChangeIframe = {this.props.handleChangeIframe.bind(this)}
             />
           ))}
         </Nav>
