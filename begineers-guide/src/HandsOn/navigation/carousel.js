@@ -3,19 +3,28 @@ import { Header, Nav } from "../styled";
 import Slide from "./slide";
 import UpArrow from "./upArrow";
 import DownArrow from "./downArrow";
+import axios from 'axios';
 
 class Carousel extends Component {
-  constructor(props) {
-    super(props);
 
+  state = {
+    activeIndex: 0,
+    dataFeed: [],
+  };
+
+  componentDidMount() {
     this.goToSlide = this.goToSlide.bind(this);
     this.goToPrevSlide = this.goToPrevSlide.bind(this);
     this.goToNextSlide = this.goToNextSlide.bind(this);
 
-    this.state = {
-      activeIndex: 0
-    };
+      try{
+        axios.get('https://api.myjson.com/bins/a7iiy').then( res => this.setState({dataFeed: res.data.data}));
+      } catch (error){
+        console.log(error);
+      }
   }
+
+
 
   goToSlide(index) {
     this.setState({
@@ -25,10 +34,8 @@ class Carousel extends Component {
 
   goToPrevSlide(e) {
     e.preventDefault();
-
     let index = this.state.activeIndex;
-    let { slides } = this.props;
-    let slidesLength = slides.length;
+    let slidesLength = this.state.dataFeed.length;
 
     if (index < 1) {
       index = slidesLength;
@@ -45,8 +52,7 @@ class Carousel extends Component {
     e.preventDefault();
 
     let index = this.state.activeIndex;
-    let { slides } = this.props;
-    let slidesLength = slides.length - 1;
+    let slidesLength = this.state.dataFeed.length - 1;
 
     if (index === slidesLength) {
       index = -1;
@@ -63,7 +69,7 @@ class Carousel extends Component {
     return (
       <Header className="carousel">
         <Nav className="carousel__slides">
-          {this.props.slides.map((slide, index) => (
+          {this.state.dataFeed.map((slide, index) => (
             <Slide
               key={index}
               index={index}

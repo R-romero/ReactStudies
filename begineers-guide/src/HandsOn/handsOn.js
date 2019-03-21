@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Carousel from './navigation/carousel';
-import CarouselData from './navigation/carouselData';
 
 import {
   Wrap,
@@ -26,7 +25,7 @@ class HandsOn extends Component {
       <Wrap>
         <Title>HandsOn</Title>
         <Content>
-          <Carousel slides={CarouselData()} handleChangeIframe = {this.handleChangeIframe.bind(this)}></Carousel>
+          <Carousel handleChangeIframe = {this.handleChangeIframe.bind(this)}></Carousel>
           <Fiddle
             src= {this.state.iframeUrl}
             allowFullScreen="allowfullscreen"
