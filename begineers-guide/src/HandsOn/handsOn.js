@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Carousel from './navigation/carousel';
+import CarouselData from './navigation/carouselData';
 
 import {
   Wrap,
@@ -11,7 +12,7 @@ import {
 class HandsOn extends Component {
 
   state = {
-    iframeUrl: '//jsfiddle.net/Moltenbrain/9chnv6k3/1/embedded/html,result/dark/',
+    iframeUrl: '//jsfiddle.net/Moltenbrain/9chnv6k3/embedded/html,result/dark/',
   }
 
   handleChangeIframe (url) {
@@ -20,33 +21,12 @@ class HandsOn extends Component {
     })
   }
 
-  carouselNavData = [
-    {
-      name1: 'Create Element',
-      fiddle1: '//jsfiddle.net/Moltenbrain/9chnv6k3/1/embedded/html,result/dark/',
-      name2: 'JsX Calls',
-      fiddle2: '//jsfiddle.net/Moltenbrain/vbenf3ar/embedded/html,result/dark/'
-    },
-    {
-      name1: 'Teste 3',
-      fiddle1: '//jsfiddle.net/Moltenbrain/vbenf3ar/embedded/html,result/dark/',
-      name2: 'Teste 4',
-      fiddle2: '//jsfiddle.net/Moltenbrain/vbenf3ar/embedded/html,result/dark/' 
-    },
-    {
-      name1: 'Teste 5',
-      fiddle1: '//jsfiddle.net/Moltenbrain/vbenf3ar/embedded/html,result/dark/',
-      name2: 'Teste 6',
-      fiddle2: '//jsfiddle.net/Moltenbrain/vbenf3ar/embedded/html,result/dark/' 
-    },
-  ];
-
   render() {
     return (
       <Wrap>
         <Title>HandsOn</Title>
         <Content>
-          <Carousel slides={this.carouselNavData}></Carousel>
+          <Carousel slides={CarouselData()} handleChangeIframe = {this.handleChangeIframe.bind(this)}></Carousel>
           <Fiddle
             src= {this.state.iframeUrl}
             allowFullScreen="allowfullscreen"
