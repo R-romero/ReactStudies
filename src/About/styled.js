@@ -3,8 +3,8 @@ import { device } from '../queries'
 
 export const Wrap = styled.div `
   background-color: #E5F4E3;
-  height: 240px;
   min-height:240px;
+  padding-bottom: 20px;
   display: flex;
 
   @media ${device.laptopL}{
