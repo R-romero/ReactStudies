@@ -64,7 +64,6 @@ export const Items = styled.div `
   height: 50px;
   color: #fff;
   justify-content: center;
-  
   &:hover {
     background-color: #fff;
     color: #000;
@@ -80,9 +79,17 @@ export const Scroll = styled.div `
 
 export const Desc = styled.div `
   display: flex;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
+`
+
+export const Arrow = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 15px;
+  text-align: center;
 `
 
 export const Fiddle = styled.iframe `
