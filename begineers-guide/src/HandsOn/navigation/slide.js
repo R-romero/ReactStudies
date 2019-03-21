@@ -10,12 +10,12 @@ class CarouselSlide extends Component {
           : "carousel__slide"
       }>
         <Items
-          onClick={() => this.handleChangeIframe(this.props.slide.fiddle1)}
+          onClick={() => this.props.handleChangeIframe(this.props.slide.fiddle1)}
         >
           <Desc>{this.props.slide.name1}</Desc>
         </Items>
         <Items
-          onClick={() => this.handleChangeIframe(this.props.slide.fiddle2)}
+          onClick={() => this.props.handleChangeIframe(this.props.slide.fiddle2)}
         >
           <Desc>{this.props.slide.name2}</Desc>
         </Items>
