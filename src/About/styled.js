@@ -3,12 +3,12 @@ import { device } from '../queries'
 
 export const Wrap = styled.div `
   background-color: #E5F4E3;
-  height: 30vh;
+  height: 240px;
   min-height:240px;
   display: flex;
 
   @media ${device.laptopL}{
-    min-height: 300px;
+    height: 300px;
   }
 `
 
