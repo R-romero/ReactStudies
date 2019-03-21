@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header/header";
 import About from "./About/about";
 import HandsOn from "./HandsOn/handsOn";
+import Footer from "./Footer/footer";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -19,6 +20,7 @@ class App extends Component {
         <Header />
         <About />
         <HandsOn />
+        <Footer />
       </React.Fragment>
     );
   }
