@@ -4,8 +4,12 @@ import { device } from '../queries'
 export const Wrap = styled.div `
   background-color: #E5F4E3;
   height: 30vh;
-  min-height:237px;
+  min-height:240px;
   display: flex;
+
+  @media ${device.laptopL}{
+    min-height: 300px;
+  }
 `
 
 export const Container = styled.div `
@@ -14,9 +18,10 @@ export const Container = styled.div `
 `
 
 export const Title = styled.div `
-  font-family: 'Cambria';
+  font-family: 'Javanese Text';
   padding-left: 5px;
   font-size: 2em;
+  max-height: 50px;
   font-style: bold;
 
   @media ${device.tablet} {
@@ -35,12 +40,13 @@ export const Link = styled.a `
   text-decoration: none;
   border-radius: 30% 0;
   width: 60%;
+  user-select: text;
   color: #000;
-  margin-top: 20%;
   margin-left: 20px;
+  margin-top: 10%;
 
   @media ${device.tablet} {
-    margin-top: 0;
+    margin-top: 5%;
     margin-left: 20%;
   }
 
@@ -56,7 +62,7 @@ export const Link = styled.a `
 
 export const Pic = styled.img `
   background-color: #FFF;
-  width: 80%;
+  width: 60%;
   max-width: 150px;
   align-self: center;
   border-radius: 50%;

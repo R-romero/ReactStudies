@@ -11,10 +11,11 @@ export const Wrap = styled.div `
 export const Content = styled.div `
   width: 90%;
   align-self: center;
+  min-height: 500px;
 `
 
 export const Title = styled.div `
-  font-family: 'Cambria';
+  font-family: 'Javanese Text';
   padding-left: 5px;
   font-size: 2em;
   font-style: bold;
@@ -52,10 +53,6 @@ export const Nav = styled.div`
   }.carousel__slide--active {
     display:grid;
   }
-
-  /* @media ${device.laptop}{
-    grid-template-columns: repeat(4, 1fr);
-  } */
 `
 
 export const Items = styled.div `
@@ -80,7 +77,12 @@ export const Scroll = styled.div `
 export const Desc = styled.div `
   display: flex;
   flex-direction: column;
+  font-size: 0.9em;
   justify-content: center;
+
+  @media ${device.tablet} {
+    font-size: 1em;
+  }
 `
 
 export const Arrow = styled.div `
@@ -89,10 +91,11 @@ export const Arrow = styled.div `
   justify-content: center;
   height: 100%;
   width: 15px;
+  user-select: none;
   text-align: center;
 `
 
 export const Fiddle = styled.iframe `
   width: 100%;
-  height: 300px;
+  height: 400px;
 `
