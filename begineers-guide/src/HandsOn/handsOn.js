@@ -23,7 +23,7 @@ class HandsOn extends Component {
   render() {
     return (
       <Wrap>
-        <Title>HandsOn</Title>
+        <Title>Classes</Title>
         <Content>
           <Carousel handleChangeIframe = {this.handleChangeIframe.bind(this)}></Carousel>
           <Fiddle
