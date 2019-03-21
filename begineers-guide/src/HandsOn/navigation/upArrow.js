@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import { Items, Desc } from "../styled";
+import { Items, Arrow } from "../styled";
 
 class CarouselUpArrow extends Component {
   render() {
     return (
       <Items>
-        <Desc
+        <Arrow
           className="carousel__arrow carousel__arrow--up"
           onClick={this.props.onClick}
         >
           {" "}
           ↑{" "}
-        </Desc>
+        </Arrow>
       </Items>
     );
   }
